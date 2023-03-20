@@ -7,10 +7,7 @@ import bookmarkView from './views/bookmarkView.js';
 import addRecipeView from './views/addRecipeView.js';
 import { CLOSE_MODAL_SEC } from './config.js';
 
-// https://forkify-api.herokuapp.com/v2
-
 //////////////////////////////////////////////////////////////////////////////////////////////
-
 const controlRecipe = async function () {
   try {
     // getting the id
@@ -134,10 +131,6 @@ const controlAddRecipe = async function (newRecipe) {
   }
 };
 
-function welcome() {
-  console.log('welcome');
-}
-
 //////////////////////////////////////////////////////////////////////////////////////////////
 (function () {
   // the publisher - subscriber pattern
@@ -148,6 +141,4 @@ function welcome() {
   searchView.addHandlerSearch(controlSearchResults);
   paginationView.addHandlerClick(controlPagination);
   addRecipeView.addHandlerUpload(controlAddRecipe);
-
-  welcome();
 })();
